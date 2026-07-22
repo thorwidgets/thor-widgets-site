@@ -50,13 +50,9 @@
     width: 30px;
     height: 30px;
     border-radius: 8px;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: contain;
     flex-shrink: 0;
   }
-  .logo-mark svg { width: 16px; height: 16px; color: var(--text); }
   .wordmark {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
@@ -76,26 +72,11 @@
     text-align: center;
   }
 
-  .beta-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .beta-label {
+    display: block;
+    font-size: 13px;
     color: var(--text-muted);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 7px 14px 7px 11px;
-    margin-bottom: 28px;
-  }
-  .beta-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 6px 1px rgba(255,255,255,0.7);
+    margin-bottom: 18px;
   }
 
   h1 {
@@ -191,16 +172,14 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <div class="logo-mark">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-    </div>
+    <img src="logoSR.png" alt="Thor Widgets" class="logo-mark">
     <span class="wordmark">Thor Widgets</span>
   </div>
 </nav>
 
 <main>
   <div class="wrap hero">
-    <span class="beta-pill"><span class="beta-dot"></span>Beta release</span>
+    <span class="beta-label">Currently in beta</span>
     <h1>Small tools that live<br>on your desktop.</h1>
     <p class="tagline">Timers, clocks, and everyday widgets in one lightweight app for Windows. Thor Widgets is currently in beta — thanks for trying it early.</p>
 
@@ -226,8 +205,6 @@
 </footer>
 
 <script>
-  // Placeholder: swap this href for the real .exe URL once you have it
-  // (e.g. a GitHub Releases asset link)
   document.getElementById('download-btn').addEventListener('click', (e) => {
     if (document.getElementById('download-btn').getAttribute('href') === '#') {
       e.preventDefault();
