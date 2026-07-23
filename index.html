@@ -156,6 +156,15 @@
     color: var(--text-muted);
   }
 
+  footer a {
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+  }
+
+  footer a:hover {
+    color: var(--text);
+  }
+  
   @media (max-width: 560px) {
     h1 { font-size: 30px; }
     .cta-row { flex-direction: column; align-items: stretch; }
@@ -200,7 +209,12 @@
 <footer>
   <div class="wrap footer-inner">
     <p>© 2026 Thor Widgets</p>
-    <p>Made for Windows · Electron</p>
+    <p>
+      <a href="/privacy">Privacy Policy</a> ·
+      <a href="/terms">Terms of Service</a> ·
+      <a href="/refund-policy">Refund Policy</a> ·
+      <a href="/support">Support</a>
+    </p>
   </div>
 </footer>
 
